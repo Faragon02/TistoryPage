@@ -1,0 +1,69 @@
+.cards {
+    background-color: #8f877d;
+}
+
+/* 접은글 더보기 꾸미기 */
+.btn-toggle-moreless,
+.btn_more,
+.btn_less {
+    background: #165681;
+    /* 버튼 배경색 */
+}
+
+.btn-toggle-moreless,
+.btn_more,
+.btn_less {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    padding: 5px 7px;
+    /* 버튼 안쪽 패딩 */
+    border-radius: 8px;
+    /* 버튼 둥근 정도 */
+    margin-top: 5px;
+    color: #fff !important;
+    /* 버튼의 더보기 글씨색 */
+    font-size: 14px !important;
+    /* 버튼의 글씨 크기*/
+}
+
+div[data-ke-type='moreLess'] {
+    position: relative;
+}
+
+div[data-ke-type='moreLess']::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-bottom: 0px dashed #ebebeb;
+    /* 버튼 오른쪽 선 */
+    margin-top: 22.5px;
+}
+
+.moreless-content {
+    padding: 15px 5px;
+    border-bottom: 1px dashed #1b9a1a;
+    /* 박스 아래쪽 선 */
+    border-top: 1px dashed #1b9a1a;
+    /* 박스 위쪽 선 */
+    border-right: 1px dashed #1b9a1a;
+    /* 박스 오른쪽 선 */
+    border-left: 1px dashed #1b9a1a;
+    /* 박스 왼쪽 선 */
+    background: #fff;
+    /* 박스 안 배경색 */
+}
+
+.btn-toggle-moreless:before,
+.btn_more:before {
+    content: '✚';
+    /* 버튼이 접혀있을 때 앞에 붙일 아이콘 */
+    margin-right: 5px;
+}
+
+.open .btn-toggle-moreless:before,
+.btn_less:before {
+    content: '✖';
+    /* 버튼을 닫을 때 앞에 붙일 아이콘 */
+    margin-right: 5px;
+}
